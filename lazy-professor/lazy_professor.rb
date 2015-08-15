@@ -1,7 +1,7 @@
-require 'benchmark'
 
+file_path = ARGV[0] || "./test.txt"
 answers = []
-File.open('./test.txt') {|file|
+File.open(file_path) {|file|
     file.each {|line|
         student_answers = line.chomp.chars
         student_answers.each_index {|i|
